@@ -8,22 +8,43 @@ function App() {
 
   window.addEventListener("keyup", (e) => {
     // console.log(e);
-    if (e.key == "ArrowUp") {
-      setPosition([position[0] - 1, position[1]]);
-    } else if (e.key == "ArrowRight") {
-      setPosition([position[0], position[1] + 1]);
-    } else if (e.key == "ArrowDown") {
-      setPosition([position[0] + 1, position[1]]);
-    } else if (e.key == "ArrowLeft") {
-      setPosition([position[0], position[1] - 1]);
-      // const player = document.getElementById("player") as HTMLSpanElement;
 
-      // const toGo = document.getElementById(
-      //   `${position[0]}-${position[1]}`
-      // ) as HTMLDivElement;
+    switch (e.key) {
+      case "ArrowUp":
+        setPosition([position[0] - 1, position[1]]);
+        break;
 
-      // toGo.appendChild(player);
+      case "ArrowRight":
+        setPosition([position[0], position[1] + 1]);
+        break;
+
+      case "ArrowDown":
+        setPosition([position[0] + 1, position[1]]);
+        break;
+
+      case "ArrowLeft":
+        setPosition([position[0], position[1] - 1]);
+        break;
+
+      default:
+        break;
     }
+    // if (e.key == "ArrowUp") {
+    //   setPosition([position[0] - 1, position[1]]);
+    // } else if (e.key == "ArrowRight") {
+    //   setPosition([position[0], position[1] + 1]);
+    // } else if (e.key == "ArrowDown") {
+    //   setPosition([position[0] + 1, position[1]]);
+    // } else if (e.key == "ArrowLeft") {
+    //   setPosition([position[0], position[1] - 1]);
+    //   // const player = document.getElementById("player") as HTMLSpanElement;
+
+    //   // const toGo = document.getElementById(
+    //   //   `${position[0]}-${position[1]}`
+    //   // ) as HTMLDivElement;
+
+    //   // toGo.appendChild(player);
+    // }
   });
 
   const GridIds: number[][] = [];
