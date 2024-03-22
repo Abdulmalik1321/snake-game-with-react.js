@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+
+import { GameGrid } from "./components/GameGrid";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [position, setPosition] = useState([1, 1]);
+
+  window.addEventListener("keyup", (e) => {
+    // console.log(e);
+    if (e.key == "ArrowUp") {
+      setPosition([position[0] - 1, position[1]]);
+    } else if (e.key == "ArrowRight") {
+      setPosition([position[0], position[1] + 1]);
+    } else if (e.key == "ArrowDown") {
+      setPosition([position[0] + 1, position[1]]);
+    } else if (e.key == "ArrowLeft") {
+      setPosition([position[0], position[1] - 1]);
+      // const player = document.getElementById("player") as HTMLSpanElement;
+
+      // const toGo = document.getElementById(
+      //   `${position[0]}-${position[1]}`
+      // ) as HTMLDivElement;
+
+      // toGo.appendChild(player);
+    }
+  });
+
+  const GridIds: number[][] = [];
+  for (let i = 1; i < 9; i++) {
+    for (let x = 1; x < 9; x++) {
+      GridIds.push([i, x]);
+    }
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <GameGrid GridIds={GridIds} position={position} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
