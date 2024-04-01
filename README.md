@@ -1,3 +1,4 @@
+# Check the game on => [Netlify](https://react-snake-game-abdulmalik1321.netlify.app/)
 # React Snake Game
 
 This repository contains a simple, yet fun, Snake Game built using React.js.
