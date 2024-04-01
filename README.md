@@ -7,6 +7,7 @@ This repository contains a simple, yet fun, Snake Game built using React.js.
 - Introduction
 - Installation
 - Usage
+- Screenshot
 - Contributing
 
 ## Introduction
@@ -27,6 +28,12 @@ To install and run the game locally, follow these steps:
 ## Usage
 
 The game starts immediately upon loading the page. Use the arrow keys to control the direction of the snake. The game speed can be adjusted using the ‘+’ and ‘-’ buttons on the game screen. The current and best scores are displayed above the game area.
+
+## Screenshot
+
+[screenshot](./src/screenshots/Screenshot%202024-04-01%20at%2010.44.43 PM.png "Screenshot")
+[screenshot](./src/screenshots/Screenshot%202024-04-01%20at%2010.46.12 PM.png "Screenshot")
+[screenshot](./src/screenshots/Screenshot%202024-04-01%20at%2010.46.34 PM.png "Screenshot")
 
 ## Contributing
 
