@@ -1,10 +1,10 @@
 import { Island } from "./Island";
 export function GameGrid({
-  position,
   GridIds,
+  food,
 }: {
-  position: number[];
   GridIds: number[][];
+  food: number[];
 }) {
   console.log("Rerendering Grid");
 
@@ -14,8 +14,8 @@ export function GameGrid({
         return (
           <Island
             key={`${arr[0]}-${arr[1]}`}
-            position={position}
             elementId={`${arr[0]}-${arr[1]}`}
+            food={food}
           />
         );
       })}

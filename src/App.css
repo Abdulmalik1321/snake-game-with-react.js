@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .logo {
@@ -44,22 +44,70 @@
 /* //////////////////////// */
 .GameGrid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(24, 1fr);
   gap: 2px;
 }
 .Island {
   background-color: #888;
-  border-radius: 5px;
-  width: 100px;
-  height: 100px;
+  border-radius: 3px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 30px;
-  transition: all ease-in-out 5s;
+  color: red;
 }
 
-.Island > span {
+.Island:has(> .green) {
+  background-color: greenyellow !important;
+}
+.Island:has(> .red) {
+  background-color: red !important;
+}
+
+.red {
   color: red;
-  transition: all ease-in-out 5s;
+  background-color: red !important;
+}
+.green {
+  color: greenyellow;
+  background-color: greenyellow !important;
+}
+
+.path {
+  background-color: greenyellow !important;
+}
+
+main {
+  display: flex;
+  gap: 50px;
+  margin-left: 50px;
+}
+.speed__wrap {
+  display: flex;
+  gap: 5%;
+}
+.speed {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+.speed > span {
+  font-size: 20px;
+}
+.speed button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  /* ... */
+  font-size: 20px;
+  padding: 0.3em 0.7em;
 }
